@@ -1,0 +1,10 @@
+{
+  "to-do" : [
+      {"id" : 1, "name" : "Workbook 101-102", "priority" : 3, "description" : "For tuesday homework session", "dueDate" : "2018-5-16T00:00:00"}
+  ],
+
+  "goals" : [
+    {"id" : 1, "name" : "Wind-up Bird Chronicle", "type":"Read", "currentProgress" : 34, "totalProgress" : 100, "description" : "EXAPND YOUR MIND, DUMMY"} 
+  ]
+
+}

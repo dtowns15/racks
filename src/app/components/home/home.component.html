@@ -1,0 +1,11 @@
+<h1>P.R.I.S.M</h1>
+
+<table  *ngIf="todoItems"class="table table-striped ">
+  <tr *ngFor="let t of todoItems">
+    <td>{{t.name}}</td>
+    <td>{{t.description}}</td>
+    <td>{{t.duedate | date:'fullDate'}}</td>
+    <td>{{t.priority}}</td>
+  </tr>
+  <!-- <td>{{todoItems | json}}</td> -->
+</table>
