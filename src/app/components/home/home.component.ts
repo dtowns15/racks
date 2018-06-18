@@ -15,9 +15,10 @@ export class HomeComponent implements OnInit {
   private todoItems : TodoItem[];
   private itemCollection : AngularFirestoreCollection<TodoItem>;
   private item : TodoItem;
+  private isOpened : boolean;
 
   constructor(private todoService : TodoService) {
-
+    this.isOpened = false;
    }
 
   ngOnInit() {
@@ -27,6 +28,10 @@ export class HomeComponent implements OnInit {
 
   addItem() {
 
+  }
+
+  toggleSidebar() {
+    this.isOpened = !this.isOpened;
   }
 
   // const id = this.afs.createId();

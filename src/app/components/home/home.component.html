@@ -1,11 +1,40 @@
-<h1>P.R.I.S.M</h1>
+<ng-sidebar-container class="px-3 " style="height: 100vh;">
+  <ng-sidebar class="bg-warning text-info"[(opened)] ="isOpened" mode="push">
+    <div class="bg-warning p-4 pr-5 nav-head border border-light">
+      <p class="text-info">Main Menu</p>
+    </div>
 
-<table  *ngIf="todoItems"class="table table-striped ">
-  <tr *ngFor="let t of todoItems">
-    <td>{{t.name}}</td>
-    <td>{{t.description}}</td>
-    <td>{{t.duedate | date:'fullDate'}}</td>
-    <td>{{t.priority}}</td>
-  </tr>
-  <!-- <td>{{todoItems | json}}</td> -->
-</table>
+    <div class="bg-info p-4 item">
+      <a href="#" class="text-warning">Home</a>
+    </div>
+
+    <div class="bg-info p-4 item">
+      <a  href="#" class="text-warning">Planner</a>
+    </div>
+    <div class="bg-info p-4 item" style="">
+      <a  href="#" class="text-warning">Projects</a>
+    </div>
+    <div class="bg-info p-4 item">
+      <a  href="#" class="text-warning">Settings</a>
+    </div>
+  </ng-sidebar>
+
+  <div ng-sidebar-content>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <button type="button" name="toggleButton" (click)="toggleSidebar()" style="font-size:24px; vertical-align:center;" class="btn btn-info">Open Menu <i class="fa fa-cubes fa-lg" aria-hidden="true"></i></button>
+    </nav>
+
+
+    <div class="container-fluid ">
+      <table  *ngIf="todoItems"class="table table-striped ">
+        <tr *ngFor="let t of todoItems">
+          <td>{{t.name}}</td>
+          <td>{{t.description}}</td>
+          <td>{{t.duedate | date:'fullDate'}}</td>
+          <td>{{t.priority}}</td>
+        </tr>
+    <!-- <td>{{todoItems | json}}</td> -->
+      </table>
+    </div>
+  </div>
+</ng-sidebar-container>
